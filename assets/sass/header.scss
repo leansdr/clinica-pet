@@ -1,0 +1,84 @@
+body {
+  .header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 11vh;
+    width: 100%;
+    background-color: var(--bgWhite);
+    z-index: 999;
+    .header--logo {
+      position: absolute;
+      top: 16px;
+      left: 32px;
+    }
+    .menu--opened {
+      width: 100vw !important;
+    }
+    .menu--nav {
+      height: 100vh;
+      width: 0;
+      position: absolute;
+      overflow-x: hidden;
+      overflow-y: auto;
+      background-color: var(--colorDefault);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      transition: all ease 0.5s;
+      .menu--list {
+        .menu--item {
+          list-style-type: none;
+          margin-top: 4px;
+        }
+        .menu--link {
+          display: block;
+          font-size: 1.5rem;
+          color: var(--colorWhite);
+          text-decoration: none;
+          padding: 0.5rem 2rem;
+          text-transform: uppercase;
+          font-weight: 600;
+          line-height: 2rem;
+          transition: all 0.4s;
+          text-align: center;
+          text-decoration: none;
+          &:hover {
+            margin-left: 1.5rem;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .menu--button {
+      position: fixed;
+      top: 1rem;
+      right: 4rem;
+      background-color: var(--colorDefault);
+      width: 5rem;
+      height: 5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      border: 1px solid var(--colorWhite);
+      padding: 10px 15px;
+      cursor: pointer;
+      box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+      &:hover {
+        .menu--line {
+          margin-top: 10px;
+        }
+      }
+      .menu--line {
+        background-color: var(--colorWhite);
+        width: 2rem;
+        height: 2px;
+        margin-top: 7px;
+      }
+    }
+  }
+}
