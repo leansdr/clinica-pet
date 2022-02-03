@@ -16,7 +16,6 @@ body .header {
   left: 0;
   top: 0;
   right: 0;
-  height: 11vh;
   width: 100%;
   background-color: var(--bgWhite);
   z-index: 999;
@@ -24,7 +23,12 @@ body .header {
 body .header .header--logo {
   position: absolute;
   top: 16px;
-  left: 32px;
+  left: 35px;
+  z-index: 999;
+}
+body .header .header--logo img {
+  width: 100px;
+  height: 100px;
 }
 body .header .menu--opened {
   width: 100vw !important;
@@ -35,7 +39,7 @@ body .header .menu--nav {
   position: absolute;
   overflow-x: hidden;
   overflow-y: auto;
-  background-color: var(--colorDefault);
+  background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,7 +53,7 @@ body .header .menu--nav .menu--list .menu--item {
 body .header .menu--nav .menu--list .menu--link {
   display: block;
   font-size: 1.5rem;
-  color: var(--colorWhite);
+  color: var(--colorDefault);
   text-decoration: none;
   padding: 0.5rem 2rem;
   text-transform: uppercase;
@@ -68,8 +72,8 @@ body .header .menu--button {
   top: 1rem;
   right: 4rem;
   background-color: var(--colorDefault);
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -90,73 +94,44 @@ body .header .menu--button .menu--line {
   margin-top: 7px;
 }
 
-body .banner {
-  display: flex;
-  margin-top: 110px;
+.sliders .slider-item img {
+  height: 100vh;
 }
-body .banner .banner--item {
+.sliders .slider-item .slider-title-one {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  flex-direction: column;
+  height: 100vh;
+  width: 40vw;
 }
-body .banner .banner--item img {
-  width: 100vw;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-body .banner .banner--item .banner--title {
-  position: absolute;
-  top: 23%;
-  text-align: center;
-}
-body .banner .banner--item .banner--title h2 {
-  font-size: 60px;
-  margin-bottom: 1.5rem;
-  color: var(--colorWhite);
-  font-weight: 700;
-}
-body .banner .banner--item .banner--title h1 {
-  font-size: 28px;
-  color: var(--colorWhite);
-}
-body .banner .banner--item .banner--title .banner--button {
-  text-transform: uppercase;
-  text-decoration: none;
-  display: inline-block;
-  background-color: var(--colorDefault);
-  text-align: center;
-  padding: 1rem 2rem;
-  font-size: 1rem;
-  color: var(--colorWhite);
-  margin-top: 30px;
-  cursor: pointer;
-  transition: all 0.3s;
-  border-radius: 5px;
-}
-body .banner .banner--item .banner--title .banner--button:hover {
-  background-color: transparent;
-  border: 3px solid var(--colorDefault);
-  color: var(--colorWhite);
-}
-body .banner .banner-slider-buttons {
+.sliders .slider-item .slider-title-two {
   display: flex;
   justify-content: center;
-  width: 100%;
-  bottom: 50px;
-  position: absolute;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 40vw;
+  margin-left: 500px;
 }
-body .banner .banner-slider-buttons .slider-button {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: var(--colorWhite);
-  margin-left: 20px;
-  cursor: pointer;
+.sliders .slider-item .slider-title-three {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  text-align: center;
 }
-body .banner .banner-slider-buttons .slider-button:hover {
-  background-color: var(--colorDefault);
+
+.carousel-indicators {
+  margin-bottom: 100px;
+}
+.carousel-indicators button {
+  background-color: violet;
+}
+.carousel-indicators button #carouselExampleCaptions {
+  border-radius: 50% !important;
+  height: 100px;
 }
 
 /*# sourceMappingURL=main.css.map */
