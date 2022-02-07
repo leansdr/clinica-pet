@@ -1,42 +1,32 @@
 .sliders {
+  border-bottom: 3px solid #fff;
   .slider-item {
     img {
       height: 100vh;
     }
     .slider-title-one {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      height: 100vh;
-      width: 40vw;
+      @include slider-title;
+      a {
+        @include buttonLink;
+      }
     }
     .slider-title-two {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      height: 100vh;
-      width: 40vw;
+      @include slider-title;
       margin-left: 500px;
+      a {
+        @include buttonLink;
+      }
     }
     .slider-title-three {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      height: 100vh;
+      @include slider-title;
       text-align: center;
+      width: 100%;
+      a {
+        @include buttonLink;
+      }
     }
   }
 }
 .carousel-indicators {
   margin-bottom: 100px;
-  button {
-      background-color: violet;
-    #carouselExampleCaptions {
-      border-radius: 50% !important;
-      height: 100px;
-    }
-  }
 }
